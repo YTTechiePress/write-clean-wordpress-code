@@ -8,18 +8,25 @@
  * version: 0.1.0
  * License: GPL2 or later.
  * text-domain: query-apis
+ * 
+ * @package query_apis
  */
 
 // If this file is access directly, abort!!!
 defined( 'ABSPATH' ) or die( 'Unauthorized Access' );
 
+/**
+ * Gets data from API and var_dumps it.
+ *
+ * @return void
+ */
 function techiepress_get_send_data() {
 
-    $url = 'https://jsonplaceholder.typicode.com/users';
-    
-    $arguments = array(
-        'method' => 'GET'
-    );
+	$url = 'https://jsonplaceholder.typicode.com/users';
+	
+	$arguments = array(
+		'method' => 'GET',
+	);
 
 	$response = wp_remote_get( $url, $arguments );
 
