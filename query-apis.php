@@ -11,58 +11,39 @@
  */
 
 // If this file is access directly, abort!!!
-defined( 'ABSPATH'
-
-) or die( 'Unauthorized Access'
-
-);
+defined( 'ABSPATH' ) or die( 'Unauthorized Access' );
 
 function techiepress_get_send_data() {
 
-    $url = 'https://jsonplaceholder.typicode.com/users';$arguments = 
-	array('method' => 'GET');
-	$response = wp_remote_get( 
-		
-		
-		$url, $arguments 
-	
-	);
+    $url = 'https://jsonplaceholder.typicode.com/users';
+    
+    $arguments = array(
+        'method' => 'GET'
+    );
 
-	if (is_wp_error($response)){
-		$error_message = 
+	$response = wp_remote_get( $url, $arguments );
 
-
-
-
-		
-		$response->get_error_message();return
-		
-		
-		"Something went wrong: $error_message"; } else {
-		echo '<pre>'; var_dump( 
-			
-			wp_remote_retrieve_body( 
-			
-			
-			$response ) ); echo '</pre>';
-	}}	
+	if ( is_wp_error( $response ) ) {
+		$error_message = $response->get_error_message();
+		return "Something went wrong: $error_message";
+	} else {
+		echo '<pre>';
+		var_dump( wp_remote_retrieve_body( $response ) );
+		echo '</pre>';
+	}
+}	
 
 /**
  * Register a custom menu page to view the information queried.
  */
-function 
-
-techiepress_register_my_custom_menu_page() {
+function techiepress_register_my_custom_menu_page() {
 	add_menu_page(
-		__( 
-			
-			
-			'Query API Test Settings', 'query-apis' ),
+		__( 'Query API Test Settings', 'query-apis' ),
 		'Query API Test',
 		'manage_options',
-
-
-		'api-test.php','techiepress_get_send_data','dashicons-testimonial',
+		'api-test.php',
+		'techiepress_get_send_data',
+		'dashicons-testimonial',
 		16
 	);
 }
