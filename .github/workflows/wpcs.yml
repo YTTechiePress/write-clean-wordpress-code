@@ -18,4 +18,4 @@ jobs:
             standard_repo: '' # Public (git) repository URL of the coding standard
             repo_branch: 'main' # Branch of Standard repository
             phpcs_bin_path: 'phpcs' # Custom PHPCS bin path
-            use_local_config: 'false' # Use local config if available
+            use_local_config: 'true' # Use local config if available
