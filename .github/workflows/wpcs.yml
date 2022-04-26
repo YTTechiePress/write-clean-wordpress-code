@@ -7,6 +7,7 @@ jobs:
       name: WPCS
       runs-on: ubuntu-latest
       steps:
+        - uses: actions/checkout@v2
         - name: PHPCS Beautifier
           uses: ge-tracker/phpcbf-action@v1
       steps:
