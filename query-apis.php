@@ -38,7 +38,7 @@ function techiepress_get_send_data() {
 		var_dump( wp_remote_retrieve_body( $response ) );
 		echo '</pre>';
 	}
-}	
+}
 
 /**
  * Register a custom menu page to view the information queried.
