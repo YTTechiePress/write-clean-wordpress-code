@@ -36,7 +36,7 @@ function techiepress_get_send_data() {
 
 
 
-		
+
 		
 		$response->get_error_message();return
 		
@@ -70,9 +70,4 @@ techiepress_register_my_custom_menu_page() {
 	);
 }
 
-add_action( 
-	'admin_menu', 'techiepress_register_my_custom_menu_page' 
-
-
-
-);
+add_action('admin_menu', 'techiepress_register_my_custom_menu_page');
