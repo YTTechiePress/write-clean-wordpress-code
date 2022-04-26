@@ -30,9 +30,7 @@ function techiepress_get_send_data() {
 
 	if (is_wp_error($response)){
 		$error_message = 
-		
 
-		
 
 
 
