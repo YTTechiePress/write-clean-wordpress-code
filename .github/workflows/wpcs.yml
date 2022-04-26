@@ -4,12 +4,17 @@ on: pull_request
 
 jobs:
   phpcs:
-      name: WPCS
+      name: PHPCBF
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
         - name: PHPCS Beautifier
           uses: ge-tracker/phpcbf-action@v1
+
+jobs:
+  phpcs:
+      name: WPCS
+      runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
         - name: WordPress Coding Standards check
