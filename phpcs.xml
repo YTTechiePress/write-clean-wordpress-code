@@ -9,6 +9,7 @@
 
     <rule ref="WordPress">
         <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine" />
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName" />
     </rule>
 
 </ruleset>
