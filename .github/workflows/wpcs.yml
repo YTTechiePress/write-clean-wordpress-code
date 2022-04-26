@@ -7,6 +7,9 @@ jobs:
       name: WPCS
       runs-on: ubuntu-latest
       steps:
+        - name: PHPCS Beautifier
+          uses: ge-tracker/phpcbf-action@v1
+      steps:
         - uses: actions/checkout@v2
         - name: WordPress Coding Standards check
           uses: 10up/wpcs-action@stable
