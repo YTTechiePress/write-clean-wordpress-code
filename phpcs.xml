@@ -3,6 +3,7 @@
 
 	<description>Custom set of rules to check for Coding Standards in WordPress project</description>
 
+    <file>.</file>
 	<!-- Exclude WP Core folders and files from being checked. -->
 	<exclude-pattern>assets</exclude-pattern>
 
