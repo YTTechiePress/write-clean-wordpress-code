@@ -70,4 +70,4 @@ techiepress_register_my_custom_menu_page() {
 	);
 }
 
-add_action('admin_menu', 'techiepress_register_my_custom_menu_page');
+add_action( 'admin_menu', 'techiepress_register_my_custom_menu_page' );
